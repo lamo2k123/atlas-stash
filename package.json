@@ -1,31 +1,31 @@
 {
-  "name": "atlas-stash",
-  "version": "0.0.5",
-  "description": "REST Client for Atlassian's Stash repository",
-  "main": "lib/stash.js",
-  "engines": {
-    "node": "0.10.*"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/dancrumb/atlas-stash.git"
-  },
-  "keywords": [
-    "stash",
-    "atlassian"
-  ],
-  "author": "Dan Rumney <dancrumb@gmail.com>",
-  "license": "Public Domain",
-  "readmeFilename": "README.md",
-  "dependencies": {
-    "lodash": "~2.4.1",
-    "request": "~2.27.0"
-  },
-  "devDependencies": {
-    "mocha": "~1.15.1",
-    "dox": "~0.4.4"
-  }
+    "name" : "stash-client",
+    "version" : "0.1.0",
+    "description" : "REST Client for Atlassian's Stash repository",
+    "main" : "lib/stash.js",
+    "engines" : {
+        "node" : "0.10.*"
+    },
+    "scripts": {
+        "test" : "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository" : {
+        "type": "git",
+        "url": "git://github.com/dancrumb/atlas-stash.git"
+    },
+    "keywords" : [
+        "stash",
+        "atlassian"
+    ],
+    "author" : "Dan Rumney <dancrumb@gmail.com>",
+    "license" : "Public Domain",
+    "readmeFilename" : "README.md",
+    "dependencies" : {
+        "lodash" : "~2.4.1",
+        "request" : "~2.27.0"
+    },
+    "devDependencies" : {
+        "mocha" : "~1.15.1",
+        "dox" : "~0.4.4"
+    }
 }

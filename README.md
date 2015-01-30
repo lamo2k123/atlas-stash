@@ -6,22 +6,48 @@ REST Client for Atlassian's Stash
 This is still in progress and so the API should be considered unstabled, but
 it's in a good enough shape to start playing with.
 
-Example
+Projects list
 -------
 
-    var StashApi = require("atlas-stash").StashApi;
-    
-    var user = "username",
-        password = "password",
-        stash = new StashApi("https", "stash.vodori.com", null, user, password);
-    
-    var projects = stash.projects();
-    projects.on("error", function (error){
-        console.error(error);
-    }).on("allPages", function(allPages) {
-        console.log("All Pages", allPages);
+    var StashApi = require('stash-api');
+
+    var stash = StashApi({
+    	hostname : "stash.example.com",
+    	port : 8080,
+    	user : 'example',
+    	password : 'example'
     });
-    
-    stash.repos("PEPPER").on("allPages", function(repos) {
-        console.log("Repos: ", repos);
+
+    stash.projects(function(projects) {
+    	console.log('ALL-PROJECT', projects);
     });
+
+Projects single
+-------
+
+    var StashApi = require('stash-api');
+
+    var stash = StashApi({
+    	hostname : "stash.example.com",
+    	port : 8080,
+    	user : 'example',
+    	password : 'example'
+    });
+
+    stash.projects('projectKey', function(project) {
+    	console.log('Single-project', project);
+    });
+
+Project icon
+-------
+
+    var StashApi = require('stash-api');
+
+    var stash = StashApi({
+    	hostname : "stash.example.com",
+    	port : 8080,
+    	user : 'example',
+    	password : 'example'
+    });
+
+    stash.projectsIcon('projectKey'); // /rest/api/1.0/projects/{projectKey}/avatar.png
